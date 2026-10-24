@@ -25,3 +25,13 @@ Check the output:
 kubectl get pods
 kubectl logs -f <pod-name>
 ```
+
+## Exercise 1.3 - Declarative approach
+
+Replace the imperative deployment with the manifest in `log_output/manifests/`:
+
+```bash
+kubectl delete deployment log-output-dep
+kubectl apply -f log_output/manifests/deployment.yaml
+kubectl logs -f <pod-name>
+```
